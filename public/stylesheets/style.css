@@ -31,6 +31,15 @@ a {
   font-size: 13px;
 }
 
+.delete-done-button {
+  background-color: #D9534F;
+  color: #FFF;
+  border-radius: 1rem;
+  padding: 0 10px;
+  line-height: 28px;
+  font-size: 13px;
+}
+
 .all-done-button {
   background-color: #23AAE2;
   color: #FFF;

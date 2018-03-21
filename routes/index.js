@@ -109,6 +109,17 @@ router.get('/task/:_id', function (req, res, next) {
     });
 });
 
+/* POST delete all completed tasks */
+/* When delete completed tasks button is clicked, this deletes all completed tasks
+ * and redirects to the tasks to do page */
+router.post('/deleteDone', function (req, res, next) {
 
+    Task.deleteMany({completed: true})
+        .then( () => {
+            res.redirect('/');
+        }) .catch( (err) => {
+            next(err);
+    });
+});
 
 module.exports = router;

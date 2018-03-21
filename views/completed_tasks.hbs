@@ -13,4 +13,14 @@
     {{else}}
         <p>No tasks have been completed.</p>
     {{/if}}
+
+    <!-- Form to add in delete completed tasks button -->
+    {{#if tasks}}
+        <div class="delete-done">
+            <form action="/deleteDone" method="POST">
+                <input class="delete-done-button" type="submit" value="Delete Completed Tasks">
+            </form>
+        </div>
+    {{/if}}
+
 </div>
