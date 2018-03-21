@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body {
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.delete-form, .done-form {
+  display: inline-block;
+}
+
+.done-button {
+  background-color: #3D73A2;
+  color: #FFF;
+  border-radius: 1rem;
+  padding: 0 10px;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+.delete-button {
+  background-color: #D9534F;
+  color: #FFF;
+  border-radius: 1rem;
+  padding: 0 10px;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+.all-done-button {
+  background-color: #23AAE2;
+  color: #FFF;
+  border-radius: 1rem;
+  padding: 0 10px;
+  line-height: 28px;
+  font-size: 13px;
+}
+
+#add-task-button {
+  background-color: #23AAE2;
+  color: #FFF;
+  border-radius: 1rem;
+  padding: 0 10px;
+  line-height: 22px;
+  font-size: 13px;
+}
+
+.navigation {
+  padding: 10px;
+}
+
+li {
+  padding: 10px;
+}

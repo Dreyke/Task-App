@@ -1,0 +1,16 @@
+<h2>Completed Tasks</h2>
+
+<div class="task-list">
+
+    <!-- display list of completed tasks, if no tasks have been completed, display message -->
+    {{#if tasks}}
+        <ul>
+            {{#each tasks}}
+                <li><a href="task/{{this._id}}">{{this.text}}</a></li>
+            {{/each}}
+        </ul>
+
+    {{else}}
+        <p>No tasks have been completed.</p>
+    {{/if}}
+</div>

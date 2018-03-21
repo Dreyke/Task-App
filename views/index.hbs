@@ -1,0 +1,42 @@
+<h2>Tasks To Do</h2>
+
+<!-- form for adding a new task -->
+<div class="add-task">
+    <form id="add-task-form" action="/add" method="POST">
+        <input id="add-task-text" name="text" placeholder="To Do Task">
+        <input id="add-task-button" name="add" type="submit" value="Add">
+    </form>
+</div>
+
+<!-- loop to create a li for each task -->
+<div class="task-list">
+    <!-- create a form for each task item -->
+
+    {{#if tasks}}
+        <ol>
+            {{#each tasks}}
+                <li><a href="task/{{this._id}}">{{this.text}}</a>
+                    <form class="done-form" action="/done" method="POST">
+                        <input class="done-button" type="submit" name="done" value="Done!">
+                        <input type="hidden" name="_id" value="{{this._id}}">
+                    </form>
+
+                    <form class="delete-form" action="/delete" method="POST">
+                        <input class="delete-button" type="submit" name="delete" value="Delete">
+                        <input type="hidden" name="_id" value="{{this._id}}">
+                    </form>
+                </li>
+            {{/each}}
+        </ol>
+    {{else}}
+        <p>No tasks to do</p>
+    {{/if}}
+
+    {{#if tasks}}
+        <div class="all-done">
+            <form action="/alldone" method="POST">
+                <input class="all-done-button" type="submit" value="All done">
+            </form>
+        </div>
+    {{/if}}
+</div>
