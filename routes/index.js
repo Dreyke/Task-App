@@ -41,6 +41,7 @@ router.post('/done', function (req, res, next) {
         .then( (originalTask) => {
             // originalTask only has a value if document with this _id was found
             if (originalTask) {
+                req.flash('info', originalTask.text + ' marked as done.'); //message when users marks task completed.
                 res.redirect('/');
             } else {
                 var err = new Error('Not Found');

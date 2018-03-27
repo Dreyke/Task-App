@@ -65,3 +65,11 @@ a {
 li {
   padding: 10px;
 }
+
+.error-message {
+  color: #ff0000;
+}
+
+.info-message {
+  color: orange;
+}

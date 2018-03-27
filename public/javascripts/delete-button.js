@@ -1,26 +1,20 @@
 // function to confirm with the user if they want to delete all tasks on the
 // completed tasks page.
-//$(function () {
 
-  //  $('.delete-done-button').click(function (e) {
-    //    var okDelete = confirm("Test");
+var deleteConfirmation = document.querySelectorAll(".delete-button"); // selects delete button class
 
-      //  if (!okDelete) {
-          //  e.preventDefault();
-        //}
-    //})
-//});
+deleteConfirmation.forEach(function (button) {
 
-var deleteButtons = document.querySelectorAll(".delete-button");
-
-deleteButtons.forEach(function (button) {
-
+    // event listener for mouse click
     button.addEventListener('click', function (ev) {
 
-        var okDelete = confirm('Are you sure?');
+        // confirmation message for user
+        var deleteConfirm = confirm('Are you sure?');
 
-        if (!okDelete) {
+        // if user clicks cancel, does not delete task
+        if (!deleteConfirm) {
             ev.preventDefault();
         }
     })
 });
+
