@@ -71,6 +71,7 @@ router.post('/delete', function (req, res, next) {
     Task.findByIdAndRemove(req.body._id)
         .then( (deletedTask) => {
             if (deletedTask) {
+                req.flash('info', "Task has been deleted.")
                 res.redirect('/');
             } else {
                 var error = new Error('Task not found');
@@ -87,6 +88,7 @@ router.post('/alldone', function (req, res, next) {
 
     Task.updateMany({completed: false}, {completed: true})
         .then( () => {
+            req.flash('info', 'All tasks are done!');
             res.redirect('/');
         }) .catch( (err) => {
             next(err);

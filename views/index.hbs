@@ -3,7 +3,7 @@
 <!-- form for adding a new task -->
 <div class="add-task">
     <form id="add-task-form" action="/add" method="POST">
-        <input id="add-task-text" name="text" placeholder="To Do Task">
+        <input id="add-task-text" name="text" placeholder="To Do Task" required>
         <input id="add-task-button" name="add" type="submit" value="Add">
     </form>
 </div>
@@ -12,7 +12,7 @@
 <div class="flash-messages">
     {{#if messages}}
         <p class="error-message">{{messages.error}}</p>
-        <p class="info.message">{{message.info}}</p>
+        <p class="info-message">{{messages.info}}</p>
     {{/if}}
 </div>
 
