@@ -8,6 +8,14 @@
     </form>
 </div>
 
+<!-- div for flash messages -->
+<div class="flash-messages">
+    {{#if messages}}
+        <p class="error-message">{{message.error}}</p>
+        <p class="info.message">{{message.info}}</p>
+    {{/if}}
+</div>
+
 <!-- loop to create a li for each task -->
 <div class="task-list">
     <!-- create a form for each task item -->
@@ -40,3 +48,5 @@
         </div>
     {{/if}}
 </div>
+
+<script type="text/javascript" src="/public/javascripts/delete-button.js"></script>

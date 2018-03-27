@@ -29,6 +29,7 @@ router.post('/add', function(req, res, next){
         });
     }
     else {
+        req.flash('error', 'Please enter a task.'); // Flash an error message
         res.redirect('/'); //else, ignore and redirect to home page.
     }
     });
